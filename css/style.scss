@@ -2,9 +2,9 @@ $small: 490px;
 $medium: 900px;
 
 body {
-    margin: 0;
-    padding: 0;
- }
+  margin: 0;
+  padding: 0;
+}
 
 .app {
   .app-title {
@@ -20,9 +20,10 @@ body {
 
   .exchangerateCard {
     .flag {
-      width: 43px;
-      height: 30px;
+      width: 45px;
+      height: 31px;
       margin: 3px 14px 0px 1px;
+      object-fit: contain;
     }
 
     .text-type-title {
@@ -35,7 +36,6 @@ body {
       color: #2b3b48;
     }
     .text-title {
-      margin: 0 41px 6px 56px;
       font-family: Roboto;
       font-size: 12px;
       font-weight: 500;
@@ -45,22 +45,21 @@ body {
       letter-spacing: normal;
       text-align: right;
       color: #4f6477;
+      white-space: nowrap;
     }
     .text-type-description {
+      font-family: Roboto;
       font-size: 12px;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
-      line-height: 2;
+      line-height: 1.5;
       letter-spacing: normal;
       text-align: right;
+      white-space: nowrap;
       color: #2b3b48;
-      @media screen and (max-width: $small) {
-        white-space: nowrap;
-      }
     }
     .text-description {
-      margin-left: 54px;
       font-family: Roboto;
       font-size: 16px;
       font-weight: normal;
@@ -70,6 +69,9 @@ body {
       letter-spacing: normal;
       text-align: right;
       color: #54738d;
+    }
+    .m-30 {
+      margin-left: 30px;
     }
   }
   .line {
@@ -82,6 +84,7 @@ body {
     padding: 19px 20px 26px;
     background-image: linear-gradient(154deg, #2b3b48 32%, #8093a5 115%);
     text-align: center;
+    border-radius: 5px;
 
     .rectangle-title {
       font-family: Roboto;
@@ -100,6 +103,49 @@ body {
       svg {
         font-size: 32px;
       }
+    }
+  }
+  .footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $small) {
+      display: contents !important;
+    }
+    .btn-detay {
+      background-color: #2b3b48;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.94px;
+      height: 48px;
+      text-align: center;
+      color: #fff;
+      white-space: nowrap;
+      height: 48px;
+      border: 0px;
+      border-radius: 3px;
+    }
+    .btn-all {
+      background-color: #fff;
+      border: solid 2px #4f6477;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      height: 48px;
+      letter-spacing: 0.94px;
+      text-align: center;
+      white-space: nowrap;
+      color: #2b3b48;
+      border-radius: 3px;
+    }
+    .space {
+      margin: 10px;
     }
   }
 }

@@ -16,10 +16,19 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="app mt-4 pt-4 container">
-      <img src="https://www.mediaclick.com.tr/assets/images/logo-black.svg" alt="">
+      <a href="https://www.mediaclick.com.tr/tr" target="_blank">
+        <img
+          src="https://www.mediaclick.com.tr/assets/images/logo-black.svg"
+          alt="MadiaClick"
+        />
+      </a>
       <hr class="line" />
       <span class="app-title">Piyasalar</span>
       <hr class="line" />
@@ -33,7 +42,12 @@
           <div class="rectangle">
             <span class="rectangle-title">Döviz Çevir</span>
             <div class="mt-4 mb-4 input-group">
-              <input class="form-control money w-50" type="text" value="10" />
+              <input
+                class="form-control money w-50"
+                pattern="[A-Za-z]{3}"
+                type="text"
+                value="10"
+              />
               <select class="form-select select-current"></select>
             </div>
             <div class="change-button">
@@ -43,22 +57,17 @@
               <input
                 class="form-control resultMoney"
                 type="text"
-                value=""
+                disabled
               /><span class="bg-white input-group-text">tl</span>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="mt-4 mb-4 row row-cols-lg-2 row-cols-md-2 row-cols-sm-7 row-cols-2"
-      >
-        <div class="col-sm-6 col-12">
-          <button type="button" class="w-100 btn btn-secondary btn-lg">
-            Detaylı Bilgi
-          </button>
-        </div>
-        <div class="col-sm-6 col-12">
-          <button type="button" class="w-100 btn btn-light btn-lg">
+      <div class="mt-1 mb-4">
+        <div class="footer-buttons w-75">
+          <button type="button" class="btn-detay w-100">Detaylı Bilgi</button>
+          <div class="space"></div>
+          <button type="button" class="btn-all w-100">
             Tüm Piyasalar
             <img src="img/left.png" />
           </button>

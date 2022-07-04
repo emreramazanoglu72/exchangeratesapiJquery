@@ -15,9 +15,11 @@ body {
 }
 
 .app .exchangerateCard .flag {
-  width: 43px;
-  height: 30px;
+  width: 45px;
+  height: 31px;
   margin: 3px 14px 0px 1px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .app .exchangerateCard .text-type-title {
@@ -31,7 +33,6 @@ body {
 }
 
 .app .exchangerateCard .text-title {
-  margin: 0 41px 6px 56px;
   font-family: Roboto;
   font-size: 12px;
   font-weight: 500;
@@ -41,27 +42,23 @@ body {
   letter-spacing: normal;
   text-align: right;
   color: #4f6477;
+  white-space: nowrap;
 }
 
 .app .exchangerateCard .text-type-description {
+  font-family: Roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: normal;
   text-align: right;
+  white-space: nowrap;
   color: #2b3b48;
 }
 
-@media screen and (max-width: 490px) {
-  .app .exchangerateCard .text-type-description {
-    white-space: nowrap;
-  }
-}
-
 .app .exchangerateCard .text-description {
-  margin-left: 54px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
@@ -71,6 +68,10 @@ body {
   letter-spacing: normal;
   text-align: right;
   color: #54738d;
+}
+
+.app .exchangerateCard .m-30 {
+  margin-left: 30px;
 }
 
 .app .line {
@@ -84,6 +85,7 @@ body {
   padding: 19px 20px 26px;
   background-image: linear-gradient(154deg, #2b3b48 32%, #8093a5 115%);
   text-align: center;
+  border-radius: 5px;
 }
 
 .app .rectangle .rectangle-title {
@@ -105,5 +107,59 @@ body {
 
 .app .rectangle .change-button svg {
   font-size: 32px;
+}
+
+.app .footer-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 490px) {
+  .app .footer-buttons {
+    display: contents !important;
+  }
+}
+
+.app .footer-buttons .btn-detay {
+  background-color: #2b3b48;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.94px;
+  height: 48px;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  height: 48px;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.app .footer-buttons .btn-all {
+  background-color: #fff;
+  border: solid 2px #4f6477;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  height: 48px;
+  letter-spacing: 0.94px;
+  text-align: center;
+  white-space: nowrap;
+  color: #2b3b48;
+  border-radius: 3px;
+}
+
+.app .footer-buttons .space {
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */

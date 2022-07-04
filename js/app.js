@@ -55,13 +55,13 @@ const generateJson = () => {
                 >${item.description}</span
               >
             </div>
-            <div class="col">
+            <div class="col text-end m-30">
               <span class="text-title">ALIŞ</span><br /><span
                 class="text-description"
                 >${res.rates["TRY"]}</span
               >
             </div>
-            <div class="col">
+            <div class="col text-end">
               <span class="text-title">SATIŞ</span><br /><span
                 class="text-description text-right"
                 >${res.rates["TRY"]}</span
@@ -88,8 +88,9 @@ const currencyCalculator = (text) => {
 
 $(document).ready(function () {
   generateJson();
-  $(".money").simpleMoneyFormat();
-  $(".resultMoney").simpleMoneyFormat();
+  new AutoNumeric('.money');
+  new AutoNumeric('.resultMoney');
   $(".money").on("keyup", currencyCalculator);
   $(".select-current").on("change", currencyCalculator);
+
 });
